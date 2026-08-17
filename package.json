@@ -1,0 +1,30 @@
+{
+  "name": "sable-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sable — AI Trading Co-Pilot on X Layer (smart contracts)",
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:mocks:testnet": "hardhat run scripts/deployMocks.ts --network xlayerTestnet",
+    "deploy:mocks:mainnet": "hardhat run scripts/deployMocks.ts --network xlayerMainnet",
+    "deploy:router:testnet": "hardhat run scripts/deployRouter.ts --network xlayerTestnet",
+    "deploy:router:mainnet": "hardhat run scripts/deployRouter.ts --network xlayerMainnet",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network xlayerTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network xlayerMainnet",
+    "verify:testnet": "hardhat run scripts/verify.ts --network xlayerTestnet",
+    "verify:mainnet": "hardhat run scripts/verify.ts --network xlayerMainnet"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^20.14.0",
+    "hardhat": "^2.22.15",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
