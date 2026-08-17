@@ -233,8 +233,8 @@ app.get("/api/history/:address", (req: Request, res: Response) => {
   res.json({ address, history: getHistory(address) });
 });
 
-app.listen(config.port, () => {
-  console.log(`[sable-agent] listening on http://localhost:${config.port}`);
+app.listen(config.port, "0.0.0.0", () => {
+  console.log(`[sable-agent] listening on http://0.0.0.0:${config.port}`);
   if (vault.mode === "mock") {
     console.log(
       "[sable-agent] running in MOCK mode — set SABLE_VAULT_ADDRESS, AGENT_PRIVATE_KEY, AGENT_RPC_URL, DEX_ROUTER_ADDRESS in .env to go live.",
